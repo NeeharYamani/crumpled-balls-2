@@ -41,13 +41,19 @@ function draw() {
   imageMode(CENTER);
   image(dustbinImage,1090,525,195,160);
 
+  textSize(35);
+  fill("white");
+  stroke("black");
+  strokeWeight(6);
+  text("Press Up arrow to make the paper fall into the dustbin", 300,80)
+
   paper.display();
  
 }
 
 function keyPressed(){
 
-	if (keyCode === RIGHT_ARROW){
+	if (keyCode === UP_ARROW){
 
 		Matter.Body.applyForce(paper.body,paper.body.position,{x:160,y:-115})
 	}
